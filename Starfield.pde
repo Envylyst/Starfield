@@ -1,5 +1,5 @@
 //your code here
-Particle[] bob = new Particle[30];
+Particle[] bob = new Particle[50];
 void setup()
 {
 	size (500,500);
@@ -40,7 +40,7 @@ class NormalParticle implements Particle
 	{
 		myX += (Math.sin(dAngle)*PI);
 		myY += (Math.cos(dAngle)*PI);
-		dAngle = dAngle + 0.05;
+		dAngle = dAngle + 0.02;
 	}
 
 	void show()
@@ -80,6 +80,6 @@ class JumboParticle extends NormalParticle //uses inheritance
 	public void show()
 	{
 		fill(90,90,90);
-		ellipse(250, 250, 50, 50);
+		ellipse(myX+45,myY-90, 50, 50);
 	}
 }
